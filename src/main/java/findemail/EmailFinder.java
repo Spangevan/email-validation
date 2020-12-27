@@ -1,12 +1,13 @@
 package findemail;
 
+import java.util.Scanner;
+
 public class EmailFinder {
-	
-	
-	public static void main (String[] args) {
-		
+
+	public static void main(String[] args) {
+
 		EmailList emailList = new EmailList(20);
-		
+
 		emailList.addEmail("Razzlefrazz@gmail.com");
 		emailList.addEmail("Gatsby@yahoo.com");
 		emailList.addEmail("snowiscold@gmail.com");
@@ -25,9 +26,22 @@ public class EmailFinder {
 		emailList.addEmail("red.apples@gmail.com");
 		emailList.addEmail("blue.pear@gmail.com");
 		emailList.addEmail("happy.feet@gmail.com");
-		
-		
-		
+
+		emailList.printEmails();
+
+		System.out.println("Please provide an email to search for:");
+
+		Scanner scanner = new Scanner(System.in);
+		String emailSearch = scanner.nextLine();
+
+		boolean foundMatch = emailList.foundMatch(emailSearch);
+
+		if (foundMatch) {
+			System.out.println(emailSearch + " is a valid email");
+		} else {
+			System.out.println(emailSearch + " is not a valid email");
+		}
+
 	}
 
 }

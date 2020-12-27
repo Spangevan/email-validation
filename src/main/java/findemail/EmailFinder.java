@@ -6,7 +6,7 @@ public class EmailFinder {
 
 	public static void main(String[] args) {
 
-		EmailList emailList = new EmailList(20);
+		EmailList emailList = new EmailList(18);
 
 		emailList.addEmail("Razzlefrazz@gmail.com");
 		emailList.addEmail("Gatsby@yahoo.com");

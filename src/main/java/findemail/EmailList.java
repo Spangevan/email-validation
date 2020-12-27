@@ -31,10 +31,10 @@ public class EmailList {
 
 	public boolean foundMatch(String input) {
 		for (int i = 0; i < this.emails.length; i++) {
-			if (this.emails[i].contentEquals(input)) {
+			if (this.emails[i].equalsIgnoreCase(input)) {
 				return true;
 			}
-		}
+		} 
 		return false;
 	}
 
